@@ -1,4 +1,4 @@
-# ESP32 INMP441 Touch Audio WAV Recorder (`inmp441_audio_recorder`)
+# ESP32 INMP441 Touch Audio WAV Recorder (`audio_recorder_esp32`)
 
 An ESP32-based 1-second audio dataset recording tool designed for capturing wake word and speech samples. It pairs the **INMP441 I2S digital microphone** with an ESP32 capacitive touch trigger (or the on-board BOOT button) to capture high-fidelity 16 kHz 16-bit mono PCM audio and transmit it losslessly over USB Serial to a host PC companion script that saves standard `.wav` files.
 
@@ -43,7 +43,7 @@ An ESP32-based 1-second audio dataset recording tool designed for capturing wake
 ## Project Structure
 
 ```text
-inmp441_audio_recorder/
+audio_recorder_esp32/
 ├── CMakeLists.txt              # Root CMake configuration
 ├── sdkconfig.defaults          # Project default overrides (target esp32, 2MB flash, 160MHz CPU)
 ├── .gitignore                  # Git exclusions (build artifacts, *.wav files, sdkconfig, etc.)
@@ -52,7 +52,7 @@ inmp441_audio_recorder/
 ├── recordings/                 # Output folder for recorded WAV files (kept via .gitkeep)
 └── main/
     ├── CMakeLists.txt          # Component build configuration
-    └── inmp441_audio_recorder.c# ESP32 firmware source (I2S capture, touch/button triggers, packet transmission)
+    └── audio_recorder_esp32.c# ESP32 firmware source (I2S capture, touch/button triggers, packet transmission)
 ```
 
 ---
