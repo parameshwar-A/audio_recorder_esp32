@@ -1,0 +1,35 @@
+# Build artifacts
+build/
+*.bin
+*.elf
+*.map
+
+# Recorded audio files (exclude dataset/audio from repo)
+recordings/*.wav
+*.wav
+!recordings/.gitkeep
+
+# ESP-IDF configuration and generated files
+sdkconfig
+sdkconfig.old
+dependencies.lock
+managed_components/
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Editor and IDE files
+.vscode/
+.idea/
+.clangd/
+compile_commands.json
+*.swp
+*~
+
+# OS generated files
+.DS_Store
+Thumbs.db
